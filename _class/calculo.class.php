@@ -6,8 +6,8 @@
      */
     class calculo{        
         
-        private $dig_primeiro;//Variável em que o primeiro digito do calculo será armazenada
-        private $dig_segundo; //Variável em que o segundo digito do calculo será armazenada
+        private $dig_primeiro;//Variável em que o primeiro digito do calculo será armazenado
+        private $dig_segundo; //Variável em que o segundo digito do calculo será armazenado
         
         
         //Esta função é reponsável por pegar o número do cpf digitado e retornar true ou false para a validação 
