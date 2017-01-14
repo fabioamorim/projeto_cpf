@@ -1,11 +1,26 @@
 body{
-	background-color: #E0FFFF
+	background-color: #E0FFFF;
 }
 .field_cpf{
+	height: 130px;
     padding:20px;
     position: absolute;
     left: 40%;
     top: 40%;
     border-radius: 10px;
 }
-
+.field_cpf p{
+	text-align: center;	
+}
+.valido{
+	color:green;
+}
+.invalido{
+	color:red;
+}
+.botao{
+	padding: 5px;
+	background-color: #DCDCDC;
+	font-family: 'Bree Serif', sans-serif;
+	border-radius: 10px;
+}

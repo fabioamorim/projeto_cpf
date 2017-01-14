@@ -31,6 +31,7 @@
             <meta charset="utf-8">
             <title>Validação de CPF</title>
             <link rel="stylesheet" type="text/css" href="_css/style.css"/>
+            <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
             <script type="text/javascript" src="_jquery/jquery-1.2.6.pack.js"></script>
             <script type="text/javascript" src="_jquery/jquery.maskedinput-1.1.4.pack.js"></script>
             <script type="text/javascript">$(document).ready(function(){	$("#vCpf").mask("999.999.999-99");});</script>            
@@ -48,9 +49,9 @@
                            >
 
                         <br><br>
-                  <input type=submit name = "verificar" value=VERIFICAR >
-                  <input type=submit name = "gerar" value=GERAR>
-                  <input type=submit name = "limpar" value=LIMPAR >
+                  <button class='botao' name = "verificar">VERIFICAR</button>
+                  <button class='botao' name = "gerar">GERAR</button>
+                  <button class='botao' name = "limpar">LIMPAR</button>
 <?php
                 if($valida){
                     if(isset($_POST['verificar'])){       
