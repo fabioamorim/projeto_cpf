@@ -1,4 +1,4 @@
-    <?php
+<?php
     /*
      *System: Gerador e validador de CPF v. 1.0
      *Data:20/08/2016
@@ -7,29 +7,12 @@
       
       include_once ('_class/calculo.class.php');
       
+      $valida = false;
       // verifica se o campo cpf foi preenchido e enviado
       if(isset($_REQUEST['nCpf'])){
     
         $novoCalculo = new calculo();
-    
-        //  verifica se o botao foi precionado
-        if(isset($_POST['verificar'])){       
-           if($novoCalculo->cpf_invalido($_REQUEST['nCpf'])){
-                   if($novoCalculo->calculo_cpf($_REQUEST['nCpf'])){
-                         echo "<script>
-                                  alert('CPF valido!');
-                              </script>";
-                   }else{
-                         echo "<script>
-                                  alert('CPF invalido!');
-                              </script>";
-                   }
-            }else{
-                         echo "<script>
-                                  alert('CPF invalido!');
-                              </script>";
-            }
-        }
+        $valida = true;
         // Se botão gerar foi precionado
         if(isset($_POST['gerar'])){
           $novoCalculo->gerar();
@@ -41,7 +24,7 @@
        
      }     
     
-    ?>
+?>
 <!DOCTYPE html>
     <html>
         <head>
@@ -68,6 +51,21 @@
                   <input type=submit name = "verificar" value=VERIFICAR >
                   <input type=submit name = "gerar" value=GERAR>
                   <input type=submit name = "limpar" value=LIMPAR >
+<?php
+                if($valida){
+                    if(isset($_POST['verificar'])){       
+                        if($novoCalculo->cpf_invalido($_REQUEST['nCpf'])){
+                            if($novoCalculo->calculo_cpf($_REQUEST['nCpf'])){
+                                  echo "<p class='valido'>CPF VÁLIDO!</p>";
+                            }else{
+                                  echo "<p class='invalido'>CPF INVÁLIDO!</p>";
+                            }
+                        }else{
+                           echo "<p class='invalido'>CPF INVÁLIDO!</p>";
+                        }
+                    }
+                }    
+?>
                 </fieldset>                  
               </form>
           </div>    
