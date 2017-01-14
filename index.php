@@ -1,4 +1,4 @@
-    <?php
+<?php
     /*
      *System: Gerador e validador de CPF v. 1.0
      *Data:20/08/2016
@@ -13,18 +13,7 @@
     
         $novoCalculo = new calculo();
         $valida = true;
-        //verifica se o botao foi precionado
-        /*if(isset($_POST['verificar'])){       
-           if($novoCalculo->cpf_invalido($_REQUEST['nCpf'])){
-                   if($novoCalculo->calculo_cpf($_REQUEST['nCpf'])){
-                      echo "<p>CPF válido</p>";
-                   }else{
-                      echo "<p>CPF inválido</p>";
-                   }
-            }else{
-               echo "<p>CPF inválido</p>";
-            }
-        }*/
+
         // Se botão gerar foi precionado
         if(isset($_POST['gerar'])){
           $novoCalculo->gerar();
@@ -36,13 +25,14 @@
        
      }     
     
-    ?>
+?>
 <!DOCTYPE html>
     <html>
         <head>
             <meta charset="utf-8">
             <title>Validação de CPF</title>
             <link rel="stylesheet" type="text/css" href="_css/style.css"/>
+            <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
             <script type="text/javascript" src="_jquery/jquery-1.2.6.pack.js"></script>
             <script type="text/javascript" src="_jquery/jquery.maskedinput-1.1.4.pack.js"></script>
             <script type="text/javascript">$(document).ready(function(){	$("#vCpf").mask("999.999.999-99");});</script>            
@@ -60,9 +50,10 @@
                            >
 
                         <br><br>
-                  <input type=submit name = "verificar" value=VERIFICAR >
-                  <input type=submit name = "gerar" value=GERAR>
-                  <input type=submit name = "limpar" value=LIMPAR >
+
+                  <button class='botao' name = "verificar">VERIFICAR</button>
+                  <button class='botao' name = "gerar">GERAR</button>
+                  <button class='botao' name = "limpar">LIMPAR</button>
 <?php
                 if($valida){
                     if(isset($_POST['verificar'])){       
