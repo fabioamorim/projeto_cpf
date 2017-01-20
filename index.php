@@ -39,6 +39,9 @@
         </head>
         <body>
           <div>
+              <h1>Gerador e validador de CPF</h1>
+              <p>Este sistema tem a funcionalidade de gerar CPFs válidos, porém não necessariamente já existentes.<br />
+                 Apenas validando os dígitos verificadores. Também validar CPFs digitados utilizando a mesma logica.</p>
               <form id="form_cpf" method=POST action="?check=true">
                 <fieldset class="field_cpf">
                    CPF:<br><input type=text name="nCpf" id="vCpf" maxlength=14

@@ -1,9 +1,13 @@
 body{
 	background-color: #E0FFFF;
+	font-family: 'Bree Serif', sans-serif;
+}
+h1 , p{
+	text-align: center;
 }
 .field_cpf{
 	height: 130px;
-    padding:20px;
+    padding:30px;
     position: absolute;
     left: 40%;
     top: 40%;
