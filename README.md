@@ -1,6 +1,6 @@
 # validaCpf
 
-Este projeto tem a finalidade de validar e gerar CPFs seguido a regra definida pela Receita Federal.
+Este projeto tem a finalidade de validar e gerar CPFs seguindo a regra definida pela Receita Federal.
 
 Pré-requisitos:
 
