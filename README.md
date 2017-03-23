@@ -11,6 +11,7 @@ Tecnologias utilizadas:
 - PHP 5.6.25 - Linguagem Server-side
 - Apache 2.4.23 - Servidor Web
 - Boostrap3.3.7 - Framework Client-side
+- Jquery - Framework Javascript
 
 Autor:
 
